@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eu e Você, Você e Eu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="audio-btn" onclick="toggleAudio()">🔊</button>
+    <audio id="audio" loop>
+        <source src="musica.mp3" type="audio/mp3">
+    </audio>     
+    <header>
+        <h1>Eu e Você, Você e Eu ❤️</h1>
+        <p>Porque você é tudo pra mim.</p>
+    </header>
+
+    <section class="gallery">
+        <h2>Tá, mas pra começar, olha a gente:</h2>
+        <div class="photo-gallery">
+            <div class="photo-box" style="background-image: url('./img/foto1.jpg');" onclick="openImage('./img/foto1.jpg');"></div>
+            <div class="photo-box" style="background-image: url('./img/foto2.jpg');" onclick="openImage('./img/foto2.jpg');"></div>
+            <div class="photo-box" style="background-image: url('./img/foto3.jpg');" onclick="openImage('./img/foto3.jpg');"></div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeImage()">
+        <span id="close-btn" class="close-btn" onclick="closeImage()">X</span>
+        <img id="lightbox-img" src="" alt="Foto Ampliada">
+    </div>
+
+    <section class="counter">
+        <h2>Estamos juntos há:</h2>
+        <div class="digital-clock">
+            <div class="time-section">
+                <div class="label">Dias</div>
+                <div class="digit-group" id="days"></div>
+            </div>
+            <div class="time-section">
+                <div class="label">Horas</div>
+                <div class="digit-group" id="hours"></div>
+            </div>
+            <div class="time-section">
+                <div class="label">Minutos</div>
+                <div class="digit-group" id="minutes"></div>
+            </div>
+            <div class="time-section">
+                <div class="label">Segundos</div>
+                <div class="digit-group" id="seconds"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="more-moments">
+        <h2>Mais alguns momentos nossos ❤️</h2>
+        <div class="photo-gallery">
+            <div class="photo-box" style="background-image: url('./img/foto4.jpg');" onclick="openImage('./img/foto4.jpg');"></div>
+            <div class="photo-box" style="background-image: url('./img/foto5.jpg');" onclick="openImage('./img/foto5.jpg');"></div>
+            <div class="photo-box" style="background-image: url('./img/foto6.jpg');" onclick="openImage('./img/foto6.jpg');"></div>
+        </div>
+        <button id="reveal-message-btn" onclick="revealMessage()">CLIQUE AQUI</button>
+        <p id="hidden-message" style="display: none;">
+            <button id="close-message-btn" onclick="closeMessage()">X</button>
+            PARA A MINHA PRINCESA,<br><br>
+            Eu te amo com todo o meu coraçãozinho amor, eu sempre vou te amar e fazer de tudo por você, por nós. Obrigado por não desistir de mim,
+            você é o amor da minha vida, eu amo muito você. 2025 vai ser o melhor ano das nossas vidas, vai ser tudo incrivel, eu quero muito viver tudo ao seu lado
+            e sei que vai ser muito mais fácil as coisas ano que vem. Me perdoa por tudo meu neném, é eu e você, você e eu pra sempre, lembra? Não podemos esquecer isso.
+            A gente é FODA juntos, únicos. Nascemos um para o outro e eu amo isso. 2025 vai ser MUUUIIITO melhor, você vai ver! Eu tenho muito orgulho de você, minha garota.
+            Você merece o mundão todo, porque você é incrível, linda, FODA! Eu amo ser seu, eu amo te amar. Obrigado por cada segundo ao seu lado amor, VAI TER MUITO PRA ME
+            ATURAR AINDA HIHIHIHI.<br><br>
+            Eu amo você, minha princesa.<br><br>
+            Do amor da sua vida. ❤️
+        </p>               
+    </section>
+
+    <button id="back-to-top" onclick="scrollToTop()">⬆️</button>
+    
+    <div class="pixel-art-container">
+        <div class="pixel-art">
+            <!-- Pixels da flor completa -->
+            <div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel flower"></div><div class="pixel flower"></div><div class="pixel flower"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div>
+            <div class="pixel"></div><div class="pixel"></div><div class="pixel flower"></div><div class="pixel center"></div><div class="pixel center"></div><div class="pixel center"></div><div class="pixel flower"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div>
+            <div class="pixel"></div><div class="pixel flower"></div><div class="pixel center"></div><div class="pixel flower"></div><div class="pixel flower"></div><div class="pixel flower"></div><div class="pixel center"></div><div class="pixel flower"></div><div class="pixel"></div><div class="pixel"></div>
+            <div class="pixel flower"></div><div class="pixel center"></div><div class="pixel flower"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel flower"></div><div class="pixel center"></div><div class="pixel flower"></div><div class="pixel"></div>
+            <div class="pixel flower"></div><div class="pixel flower"></div><div class="pixel center"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel center"></div><div class="pixel flower"></div><div class="pixel flower"></div><div class="pixel"></div>
+            <div class="pixel"></div><div class="pixel stem"></div><div class="pixel stem"></div><div class="pixel stem"></div><div class="pixel stem"></div><div class="pixel stem"></div><div class="pixel stem"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div>
+            <div class="pixel"></div><div class="pixel"></div><div class="pixel leaf"></div><div class="pixel stem"></div><div class="pixel stem"></div><div class="pixel stem"></div><div class="pixel leaf"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div>
+            <div class="pixel"></div><div class="pixel"></div><div class="pixel leaf"></div><div class="pixel stem"></div><div class="pixel stem"></div><div class="pixel stem"></div><div class="pixel leaf"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div>
+            <div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel stem"></div><div class="pixel stem"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div>
+            <div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel stem"></div><div class="pixel stem"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div>
+            <div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel stem"></div><div class="pixel stem"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div>
+        </div>
+        <div class="btn-container">
+            <button onclick="takeScreenshot()">Tirar Print</button>
+        </div>
+    </div>
+    
+    <section class="question">
+        <h2>Aceita viver para todo o sempre comigo?</h2>
+        <button id="yes-btn">Sim</button>
+        <button id="no-btn">Não</button>
+    </section>        
+
+    <script src="script.js"></script>
+</body>
+</html>
