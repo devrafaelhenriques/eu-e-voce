@@ -239,20 +239,6 @@ header {
     background-color: #228b22;
 }
 
-.btn-container {
-    position: absolute;
-    bottom: 20px;
-}
-
-.btn-container button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: #007BFF;
-    color: white;
-}
 
 /* Estilo para a seção da pergunta */
 .question {
