@@ -148,20 +148,10 @@ const pixels = document.querySelectorAll('.pixel');
         let delay = 0;
 
         pixels.forEach(pixel => {
-            if (pixel.classList.contains('flower') || pixel.classList.contains('stem') || pixel.classList.contains('center') || pixel.classList.contains('leaf')) {
+            if (pixel.classList.contains('flower') || pixel.classList.contains('stem') || pixel.classList.contains('center')) {
                 setTimeout(() => {
                     pixel.style.opacity = 1;
                 }, delay);
                 delay += 100; // 100ms entre cada pixel
             }
         });
-
-        function takeScreenshot() {
-            const pixelArt = document.getElementById('pixel-art');
-            html2canvas(pixelArt).then(canvas => {
-                const link = document.createElement('a');
-                link.download = 'flor-em-pixels.png';
-                link.href = canvas.toDataURL();
-                link.click();
-            });
-        }
