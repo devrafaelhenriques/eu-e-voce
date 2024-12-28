@@ -388,3 +388,35 @@ button.fugindo .legs {
 #hidden-message br {
     margin: 10px 0; /* Dá espaço entre os quebras de linha */
 }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+
+    .photo-box {
+        width: 80px;
+        height: 80px;
+    }
+
+    .more-moments .photo-box {
+        width: 80px;
+        height: 80px;
+    }
+
+    #reveal-message-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .digital-clock {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+    }
+
+    .time-section {
+        width: 60px;
+    }
+}
