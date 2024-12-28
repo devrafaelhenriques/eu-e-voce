@@ -419,4 +419,21 @@ button.fugindo .legs {
     .time-section {
         width: 60px;
     }
+
+    .pixel-art-container {
+        margin-top: 35%;
+        margin-bottom: 35%;
+        
+    }
+    
+    .pixel-art {
+        display: grid;
+        grid-template-columns: repeat(10, 30px); /* Aumentando o tamanho */
+        grid-gap: 4px;
+    }
+
+    .pixel {
+        width: 30px; /* Aumentando o tamanho */
+        height: 30px; /* Aumentando o tamanho */
+    }
 }
